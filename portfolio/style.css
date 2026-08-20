@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+}
+
+header{
+    min-height: 100vh;
+}
+
+#resumoEFoto{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    
+}
+
+#paragrafoResumo{
+    text-align: center;
+    padding: 200px;
+}
+
+#imagemPerfil{
+    margin-right: 100px;
+    margin-top: 80px;
+
+}
+
+hr{
+    background-color: purple;
+    border-color: purple;
+    height: 5px;
+}
+
+.divProjeto{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.divProjeto div{
+    max-width: 300px;
+    border-radius: 40px;
+    padding: 40px;
+    background-color:purple;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#paragrafo{
+    max-width: 500px;
+}
