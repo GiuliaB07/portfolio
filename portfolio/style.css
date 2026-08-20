@@ -20,25 +20,29 @@ header{
 
 #botao{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 80px;
     height: auto;
+    position: relative;
+    animation: mymove 5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-#botao_a{
+@keyframes mymove{
+    from{left:0px}
+    to  {left:450px}
+}
+
+
+.botao{
     padding: 12px 24px;
     background-color: purple;
     color: white;
     border-radius: 4px;
     text-decoration: none;
-}
-
-#botao_b{
-    padding: 12px 24px;
-    background-color: purple;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
+    box-shadow: 5px 5px;
+    
 }
 
 #imagemPerfil{
@@ -66,12 +70,22 @@ hr{
     background-color:purple;
     color: white;
     margin-bottom: 50px;
+    box-shadow: 5px 10px;
+
 }
 
 .imagemProjeto{
     width: 100%;
+    
 }
 
 #paragrafo{
+    display: flex;
+    justify-content: center;
     max-width: 500px;
+
+}
+
+#imgLogoGitProjeto{
+    box-shadow: 2px 2px #515151;
 }
