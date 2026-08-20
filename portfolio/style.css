@@ -6,6 +6,22 @@ header{
     min-height: 100vh;
 }
 
+#h1{
+    font-size: 90px; 
+    color: white; 
+    text-align: center;
+    position: relative;
+    animation: move 5s;
+    animation-fill-mode: forwards;
+    transform: translateY(20px 0px);
+
+}
+
+@keyframes move{
+    from{opacity: 0;}
+    to  {opacity: 1;}
+}
+
 #resumoEFoto{
     display: flex;
     justify-content: space-between;
@@ -16,6 +32,10 @@ header{
 #paragrafoResumo{
     text-align: center;
     padding: 100px;
+    position: relative;
+    animation: move 5s;
+    animation-fill-mode: forwards;
+    transform: translateY(20px 0px);
 }
 
 #botao{
@@ -46,6 +66,10 @@ header{
 }
 
 #imagemPerfil{
+    position: relative;
+    animation: move 5s;
+    animation-fill-mode: forwards;
+    transform: translateY(20px 0px);
     margin-right: 100px;
     margin-top: 80px;
 
