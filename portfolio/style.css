@@ -18,6 +18,29 @@ header{
     padding: 200px;
 }
 
+#botao{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    height: auto;
+}
+
+#botao_a{
+    padding: 12px 24px;
+    background-color: purple;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#botao_b{
+    padding: 12px 24px;
+    background-color: purple;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
 #imagemPerfil{
     margin-right: 100px;
     margin-top: 80px;
