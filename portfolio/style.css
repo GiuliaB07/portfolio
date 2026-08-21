@@ -7,15 +7,26 @@ header{
     min-height: 100vh;
 }
 
+#divh1{
+    position: relative;
+    overflow: hidden;
+}
+
 #h1{
     font-size: 90px; 
     color: white; 
     text-align: center;
-    position: relative;
-    animation: move 5s;
-    animation-fill-mode: forwards;
-    transform: translateY(20px 0px);
+    /*text-shadow: 5px 5px 0 #9d00ff 10px 10px 0 #00d4ff;*/
+    animation:/*shadow-dance 2s infinite,*/ move 5s;
+}
 
+@keyframes shadow-dance{
+    0%, 100% {
+        text-shadow: 5px 5px 0 #9d00ff, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #9d00ff;
+    }
 }
 
 @keyframes move{
