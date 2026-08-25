@@ -20,18 +20,21 @@ header {
     animation: move 5s;
     animation-fill-mode: forwards;
     transform: translateY(20px 0px);
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 }
 
-@keyframes shadow-dance {
-
-    0%,
-    100% {
-        text-shadow: 5px 5px 0 #9d00ff, 10px 10px 0 #00d4ff;
-    }
-
-    50% {
-        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #9d00ff;
-    }
+#h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: glitch 2s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-2px, -2px);
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 15px white;
 }
 
 @keyframes move {
@@ -41,6 +44,21 @@ header {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes glitch{
+    0%, 100% {
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        transform: translate(0);
+    }
+    33% {
+        clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+        transform: translate(-5px, -5px);
+    }
+    66% {
+        clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+        transform: translate(5px, 5px);
     }
 }
 
@@ -63,8 +81,10 @@ header {
 }
 
 #botao {
+
     display: flex;
     justify-content: left;
+    align-items: left;
     gap: 80px;
     height: auto;
     position: relative;
@@ -80,7 +100,7 @@ header {
 
     to {
         opacity: 1;
-        left: 450px;
+        left: 400px;
     }
 }
 
