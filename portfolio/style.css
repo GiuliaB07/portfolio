@@ -34,7 +34,7 @@ header {
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
     transform: translate(-2px, -2px);
     color: white;
-    text-shadow: 0 0 5px white, 0 0 15px white;
+    text-shadow: 0 0 5px rgb(128, 0, 255), 0 0 15px rgb(31, 0, 37);
 }
 
 @keyframes move {
@@ -106,7 +106,7 @@ header {
 
 
 .botao {
-    padding: 12px 24px;
+    padding: 11px;
     background-color: purple;
     color: white;
     display: inline-block;
@@ -145,7 +145,7 @@ h2 {
 hr {
     background-color: purple;
     border-color: purple;
-    height: 5px;
+    height: 8px;
 }
 
 .divProjeto {
