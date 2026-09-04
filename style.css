@@ -85,11 +85,12 @@ header {
     display: flex;
     justify-content: left;
     align-items: left;
-    gap: 80px;
+    gap: 30px;
     height: auto;
     position: relative;
     animation: mymove 5s;
     animation-fill-mode: forwards;
+    margin-left: 130px;
 }
 
 @keyframes mymove {
@@ -116,9 +117,13 @@ header {
 
 }
 
+.botao:hover {
+    background-color: rgb(221, 105, 221)
+}
+
 #imagemPerfil {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     position: relative;
     animation: move 5s;
     animation-fill-mode: forwards;
@@ -146,6 +151,26 @@ hr {
     background-color: purple;
     border-color: purple;
     height: 8px;
+}
+
+.DivCarrosel {
+    display: flex;
+    justify-content: space-around;
+}
+
+.DivCarrosel div{
+    max-width: 600px;
+    border-radius: 40px;
+    padding: 40px;
+    background-color: purple;
+    color: white;
+    margin-bottom: 50px;
+    box-shadow: 5px 10px;
+}
+
+.ImagemTech{
+    width: 50px;
+    height: 50px;
 }
 
 .divProjeto {
@@ -183,5 +208,5 @@ hr {
 
 .imgLogoGitProjeto {
     box-shadow: 2px 2px #515151;
-    width: 20px;
+    width: 30px;
 }
