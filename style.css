@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    margin: 0;
 }
 
 header {
@@ -139,6 +140,7 @@ h2 {
     text-align: center;
     font-size: 40px;
     color: white;
+    
 }
 
 #p1Main {
@@ -153,24 +155,68 @@ hr {
     height: 8px;
 }
 
-.DivCarrosel {
-    display: flex;
-    justify-content: space-around;
+#NomeConhecimento {
+    margin-bottom: 200px;
 }
 
-.DivCarrosel div{
-    max-width: 600px;
-    border-radius: 40px;
-    padding: 40px;
-    background-color: purple;
+#SectionConhecimento {
+    min-height: 80vh;
+}
+
+.DivConhecimento {
+    overflow: hidden; /* Esconde o que estiver fora da área*/
+    background-color: rgba(128, 0, 128, 0.80); /*último número é a transparência, quanto menor o número mais transparente*/
+    padding: 30px 0;
+    border-radius: 20px;
+    width: 100%; /*Define uma largura*/
+    margin: auto; /*Centraliza o carrossel*/
+    box-sizing: border-box; /* Evita que o padding aumente a largura*/
+}
+
+.Carrossel {
+    display: flex;
+    flex-wrap: nowrap; /* Impede que os itens quebrem de linha*/
+    animation: PassarCarrossel 18s infinite linear; /* Faz o movimento automático*/
+    gap: 40px; /* Não deixa o espaço entre os itens*/
+    width: max-content; /* faz a largura acompanhar todos os itens, será a soma dos itens*/
+    
+}
+
+.Conhecimento {
+    width: 20vw; /*Largura de cada item. vw: viewport width = largura da tela*/
+    flex-shrink: 0; /*Não permite que ele diminua*/
+
+    /*Centraliza imagem e texto*/
+    display: flex;
+    flex-direction:column;
+
+    align-items: center; /*Centraliza tudo*/
+
+    padding: 20px; /*Espaçamento*/
+    box-sizing: border-box; /*Faz a conta da largura ficar mais previsível*/
+}
+
+.legenda-imagem {
     color: white;
-    margin-bottom: 50px;
-    box-shadow: 5px 10px;
+    margin-top: 10px; /*Espaço entre imagem e texto*/
+    font-weight: bold /*Deixa o nome um pouco mais destacado*/
 }
 
 .ImagemTech{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Evita que a imagem fica deformada*/
+}
+
+@keyframes PassarCarrossel {
+    0% { /*Começa na posição normal*/
+        transform: translateX(0);
+    }
+
+    /*Vai deslizando para a esquerda*/
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .divProjeto {
