@@ -3,10 +3,34 @@ body {
     margin: 0;
 }
 
-header {
+#quem-sou {
     text-align: center;
     min-height: 100vh;
 }
+
+#header {
+    background-color: purple;
+    height: 50px;
+}
+
+.navbar {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.navbar:hover {
+    color: black;
+}
+
+#DivNavbar {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    position: relative;
+    padding: 20px;
+}
+
 
 #divh1 {
     position: relative;
@@ -236,9 +260,38 @@ hr {
 
 }
 
+#SectionCertificados {
+    min-height: 80vh;
+}
+
+.DivCertificado {
+    display: flex;
+    justify-content: space-around;
+}
+
+.DivCertificado div {
+    color: white;
+    border-radius: 20px;
+    background-color: purple;
+    padding: 40px;
+    max-width: 500px;
+}
+
+.ImagemCertificado {
+    width: 200px;
+}
+
+.a-certificados {
+    text-decoration: none;
+    color: black;
+}
+
+.a-certificados:hover {
+    color: white;
+}
+
 .imagemProjeto {
     width: 100%;
-
 }
 
 .h3 {
@@ -249,7 +302,7 @@ hr {
     display: flex;
     justify-content: center;
     max-width: 500px;
-
+    color: white
 }
 
 .imgLogoGitProjeto {

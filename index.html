@@ -9,39 +9,55 @@
     <link rel="stylesheet" href="https://jsdelivr.net" />
 </head>
 
-<body class="matrix-bg">
-    <header>
-        <hr>
+<body>
 
-        <div id="resumoEFoto">
+    <header id="header">
+        <div id="DivNavbar">
+            <nav>
+                <div>
+                    <a class="navbar" href="#quem-sou">Sobre mim</a>
 
-            <div id="divH1">
-                <h1 id="h1" data-text="Bem-vindos"> Bem-vindos</h1>
-                <p id="paragrafoResumo">
-                    Meu nome é <b>Giulia Bianchi da Silva</b>, sou uma programadora júnior no Brasil.
-                    Estudante de <b>Ciência da Computação na UniLasalle.</b>
-                </p>
+                    <a class="navbar" href="#SectionConhecimento">Conhecimentos</a>
 
-                <div id="botao">
-                    <a class="botao" href="https://www.linkedin.com/in/giulia-bianchi-s/" target="_blank">Linkedin</a>
+                    <a class="navbar" href="#projetos">Projetos</a>
 
-                    <a class="botao" href="https://github.com/GiuliaB07" target="_blank">Meu GitHub</a>
-
-                    <a class="botao" href="mailto: giuliabsilva0704@gmail.com" target="_blank">E-mail</a>
+                    <a class="navbar" href="#SectionCertificados">Certificados</a>
                 </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="quem-sou">
+
+            <div id="resumoEFoto">
+
+                <div id="divH1">
+                    <h1 id="h1" data-text="Bem-vindos"> Bem-vindos</h1>
+                    <p id="paragrafoResumo">
+                        Meu nome é <b>Giulia Bianchi da Silva</b>, sou uma programadora júnior no Brasil.
+                        Estudante de <b>Ciência da Computação na UniLasalle.</b>
+                    </p>
+
+                    <div id="botao">
+                        <a class="botao" href="https://www.linkedin.com/in/giulia-bianchi-s/"
+                            target="_blank">Linkedin</a>
+
+                        <a class="botao" href="https://github.com/GiuliaB07" target="_blank">Meu GitHub</a>
+
+                        <a class="botao" href="mailto: giuliabsilva0704@gmail.com" target="_blank">E-mail</a>
+                    </div>
+
+                </div>
+
+                <img id="imagemPerfil" src="fotoPerfil.png">
 
             </div>
 
-            <img id="imagemPerfil" src="fotoPerfil.png">
+        </section>
+        <br>
 
-        </div>
-
-    </header>
-    <br>
-
-    <hr>
-
-    <main>
+        <hr>
         <section id="SectionConhecimento">
             <h2 id="NomeConhecimento"><b>Conhecimentos</b></h2>
             <br>
@@ -106,44 +122,87 @@
         </section>
 
         <hr>
-        <h2><b>Meus projetos</b></h2>
-        <br>
+        <section id="projetos">
+            <h2><b>Meus projetos</b></h2>
+            <br>
 
-        <div class="divProjeto">
-            <div>
+            <div class="divProjeto">
+                <div>
 
-                <img class="imagemProjeto" src="automatizandoEnvioDeEmails.png" alt="código do projeto">
+                    <img class="imagemProjeto" src="automatizandoEnvioDeEmails.png" alt="código do projeto">
 
-                <h3 class="h3"> Automatizando envios de e-mail com Python</h3>
-                <p class="paragrafo">O projeto busca automatizar o envio de e-mails utilizando as bibliotecas
-                    Pyautogui(para 'controlar'o teclado e mouse),
-                    Pyperclip (manipulação da área de transferência) e a keyboard (utilizado para escrever a mensagem)
-                </p>
-                <a href="http://github.com/GiuliaB07/automatizando-envio-de-email/tree/main" target="-blank">
-                    <img class="imgLogoGitProjeto" src="gitImagem.png" alt="Projeto">
-                </a>
+                    <h3 class="h3"> Automatizando envios de e-mail com Python</h3>
+                    <p class="paragrafo">O projeto busca automatizar o envio de e-mails utilizando as bibliotecas
+                        Pyautogui(para 'controlar'o teclado e mouse),
+                        Pyperclip (manipulação da área de transferência) e a keyboard (utilizado para escrever a
+                        mensagem)
+                    </p>
+                    <a href="http://github.com/GiuliaB07/automatizando-envio-de-email/tree/main" target="-blank">
+                        <img class="imgLogoGitProjeto" src="gitImagem.png" alt="Projeto">
+                    </a>
+
+                </div>
+
+                <div>
+
+                    <img class="imagemProjeto" src="projetoDetectorDeGolpes.png" alt="titulo do projeto">
+
+                    <h3 class="h3">Detector de golpes com Java V1.0</h3>
+                    <p class="paragrafo">Projeto desenvolvido em <b>Java</b> para o curso Fullstack 5.0 com o objetivo
+                        de
+                        analisar
+                        mensagens de texto e detectar possíveis tentativas de
+                        golpe/phishing utilizando regras de negócio e identificação de palavras-chave suspeitas.
+                        <br>
+                        Colaborei com as regras de negócio e implementação da classe AnalisadorDeGolpe.
+                    </p>
+                    <a href="https://github.com/Abiguelini/Detector-de-Golpes-v1.0-Residencia-El-Dourado"
+                        target="_blank">
+                        <img class="imgLogoGitProjeto" src="gitImagem.png" alt="Projeto Residência">
+                    </a>
+
+                </div>
 
             </div>
+        </section>
 
-            <div>
+        <section id="SectionCertificados">
+            <hr>
+            <h2>Certificados</h2>
 
-                <img class="imagemProjeto" src="projetoDetectorDeGolpes.png" alt="titulo do projeto">
+            <div class="DivCertificado">
+                <div>
+                    <img class="ImagemCertificado" src="Certificado Python.png" alt="Certificado_Python">
+                    <h3 class="h3">Certificado Python</h3>
+                    <b><a class="a-certificados" href="Certificado de Conclusão.pdf" target="_blank">Abrir
+                            certificado</a></b>
+                </div>
 
-                <h3 class="h3">Detector de golpes com Java V1.0</h3>
-                <p class="paragrafo">Projeto desenvolvido em <b>Java</b> para o curso Fullstack 5.0 com o objetivo de
-                    analisar
-                    mensagens de texto e detectar possíveis tentativas de
-                    golpe/phishing utilizando regras de negócio e identificação de palavras-chave suspeitas.
-                    <br>
-                    Colaborei com as regras de negócio e implementação da classe AnalisadorDeGolpe.
-                </p>
-                <a href="https://github.com/Abiguelini/Detector-de-Golpes-v1.0-Residencia-El-Dourado" target="_blank">
-                    <img class="imgLogoGitProjeto" src="gitImagem.png" alt="Projeto Residência">
-                </a>
+                <div>
+                    <img class="ImagemCertificado" src="Certificado Python Express-1.png"
+                        alt="Certificado_python_express">
+                    <h3 class="h3">Certificado do curso Express de Python</h3>
+                    <b><a class="a-certificados" href="Certificado Python Express.pdf" target="_blank">Abrir
+                            certificado</a></b>
+                </div>
 
+                <div>
+                    <img class="ImagemCertificado" src="Certificado_-_Nivelamento-1.png" alt="Certificado-Nivelamento1">
+                    <img class="ImagemCertificado" src="Certificado_-_Nivelamento-2.png" alt="Certificado-Nivelamento2">
+                    <h3 class="h3">Certificado do nivelamento do Hackers do Bem</h3>
+                    <b><a class="a-certificados" href="Certificado_-_Nivelamento.pdf" target="_blank">Abrir
+                            certificado</a></b>
+                </div>
+
+                <div>
+                    <img class="ImagemCertificado" src="CURSO_DE_EXTENSÃO_FUNDAMENTOS_DE_PROGRAMAÇÃO_COM_IA.png"
+                        alt="Curso-Fundamentos-Programacao-com-IA">
+                    <h3 class="h3">Certificado de curso de extensão JS</h3>
+                    <b><a class="a-certificados" href="CURSO_DE_EXTENSÃO_FUNDAMENTOS_DE_PROGRAMAÇÃO_COM_IA.pdf">Abrir
+                            certificado</a></b>
+                </div>
             </div>
-
-        </div>
+        </section>
     </main>
     <hr>
 
