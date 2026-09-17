@@ -106,7 +106,6 @@ body {
 }
 
 #botao {
-
     display: flex;
     justify-content: left;
     align-items: left;
@@ -115,7 +114,7 @@ body {
     position: relative;
     animation: mymove 5s;
     animation-fill-mode: forwards;
-    margin-left: 130px;
+    margin-left: 120px;
 }
 
 @keyframes mymove {
@@ -139,7 +138,6 @@ body {
     border-radius: 4px;
     text-decoration: none;
     box-shadow: 5px 5px;
-
 }
 
 .botao:hover {
@@ -294,6 +292,9 @@ hr {
     width: 100%;
 }
 
+.imagemProjeto:hover {
+    width: 200%;
+}
 .h3 {
     font-size: 20px;
 }
