@@ -1,312 +1,810 @@
-body {
-    background-color: black;
-    margin: 0;
+
+
+* {
+    box-sizing: border-box;
 }
 
-#quem-sou {
-    text-align: center;
-    min-height: 100vh;
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 
 #header {
     background-color: purple;
-    height: 50px;
+    min-height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+#DivNavbar {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0.40rem 2rem;
+    gap: clamp(1rem, 4vw, 4rem);
 }
 
 .navbar {
     color: white;
     text-decoration: none;
-    margin: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin: 0 1.5rem;
 }
 
 .navbar:hover {
     color: black;
 }
 
-#DivNavbar {
+
+#quem-sou {
+    min-height: 100vh;
+    padding: 100px 5% 60px;
+
     display: flex;
-    justify-content: right;
-    align-items: right;
-    position: relative;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
 #divh1 {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 #h1 {
-    font-size: 90px;
+    font-size: clamp(2.8rem, 7vw, 5.6rem);
     color: white;
     text-align: center;
+
+    margin: 0 auto 3rem;
+
     position: relative;
-    animation: move 5s;
-    animation-fill-mode: forwards;
-    transform: translateY(20px 0px);
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+
+    animation: move 2s ease forwards;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px white,
+        0 0 30px white;
 }
 
-#h1::before{
+
+
+
+#h1::before {
     content: attr(data-text);
+
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     animation: glitch 2s infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 45%,
+        0 45%
+    );
+
     transform: translate(-2px, -2px);
+
     color: white;
-    text-shadow: 0 0 5px rgb(128, 0, 255), 0 0 15px rgb(31, 0, 37);
+
+    text-shadow:
+        0 0 5px rgb(128, 0, 255),
+        0 0 15px rgb(31, 0, 37);
 }
 
-@keyframes move {
-    from {
-        opacity: 0;
-    }
 
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes glitch{
-    0%, 100% {
-        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-        transform: translate(0);
-    }
-    33% {
-        clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
-        transform: translate(-5px, -5px);
-    }
-    66% {
-        clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
-        transform: translate(5px, 5px);
-    }
-}
 
 #resumoEFoto {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: clamp(2rem, 6vw, 6rem);
 }
+
+
+
 
 #paragrafoResumo {
+    flex: 1;
+
     text-align: center;
-    padding: 100px;
-    font-size: 30px;
+
+    padding: 1rem;
+
+    font-size: clamp(1rem, 2vw, 1.875rem);
+
+    line-height: 1.6;
+
     color: white;
-    position: relative;
-    animation: move 5s;
-    animation-fill-mode: forwards;
-    transform: translateY(20px 0px);
+
+    animation: move 2s ease forwards;
 }
+
+
+
+
+#imagemPerfil {
+    width: clamp(180px, 30vw, 400px);
+    aspect-ratio: 1 / 1;
+
+    height: auto;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(255, 255, 255, 0.3);
+
+    animation: move 2s ease forwards;
+}
+
+
 
 #botao {
     display: flex;
-    justify-content: left;
-    align-items: left;
-    gap: 30px;
-    height: auto;
-    position: relative;
-    animation: mymove 5s;
-    animation-fill-mode: forwards;
-    margin-left: 120px;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+
+    animation: buttonsIn 1.5s ease forwards;
 }
-
-@keyframes mymove {
-    from {
-        opacity: 0;
-        left: 0px;
-    }
-
-    to {
-        opacity: 1;
-        left: 400px;
-    }
-}
-
 
 .botao {
-    padding: 11px;
+    padding: 0.7rem 1.2rem;
+
     background-color: purple;
+
     color: white;
+
     display: inline-block;
-    border-radius: 4px;
+
+    border-radius: 5px;
+
     text-decoration: none;
-    box-shadow: 5px 5px;
+
+    box-shadow: 5px 5px black;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .botao:hover {
-    background-color: rgb(221, 105, 221)
-}
+    background-color: rgb(221, 105, 221);
 
-#imagemPerfil {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    animation: move 5s;
-    animation-fill-mode: forwards;
-    transform: translateY(20px 0px);
-    margin-right: 100px;
-    margin-top: 80px;
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+
+    box-shadow: 7px 7px black;
 }
 
 h2 {
     text-align: center;
-    font-size: 40px;
+
+    font-size: clamp(2rem, 5vw, 2.5rem);
+
     color: white;
-    
+
+    margin: 2rem 0;
 }
 
 #p1Main {
     text-align: center;
-    font-size: 20px;
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
     color: white;
+
+    line-height: 1.6;
+
+    max-width: 900px;
+
+    margin: 0 auto 3rem;
+
+    padding: 0 1rem;
 }
 
 hr {
     background-color: purple;
-    border-color: purple;
-    height: 8px;
+    border: 1px solid purple;
+    height: 2px;
 }
 
+
 #NomeConhecimento {
-    margin-bottom: 200px;
+    margin-bottom: clamp(3rem, 10vw, 12.5rem);
 }
 
 #SectionConhecimento {
     min-height: 80vh;
+
+    padding: 4rem 0;
 }
 
 .DivConhecimento {
-    overflow: hidden; /* Esconde o que estiver fora da área*/
-    background-color: rgba(128, 0, 128, 0.80); /*último número é a transparência, quanto menor o número mais transparente*/
-    padding: 30px 0;
+    overflow: hidden;
+
+    background-color: rgba(128, 0, 128, 0.8);
+
+    padding: 1.5rem 0;
+
     border-radius: 20px;
-    width: 100%; /*Define uma largura*/
-    margin: auto; /*Centraliza o carrossel*/
-    box-sizing: border-box; /* Evita que o padding aumente a largura*/
+
+    width: 100%;
+
+    margin: 0 auto;
 }
 
 .Carrossel {
     display: flex;
-    flex-wrap: nowrap; /* Impede que os itens quebrem de linha*/
-    animation: PassarCarrossel 18s infinite linear; /* Faz o movimento automático*/
-    gap: 40px; /* Não deixa o espaço entre os itens*/
-    width: max-content; /* faz a largura acompanhar todos os itens, será a soma dos itens*/
-    
+
+    flex-wrap: nowrap;
+
+    gap: clamp(1rem, 3vw, 2.5rem);
+
+    width: max-content;
+
+    animation:
+        PassarCarrossel 18s infinite linear;
 }
 
 .Conhecimento {
-    width: 20vw; /*Largura de cada item. vw: viewport width = largura da tela*/
-    flex-shrink: 0; /*Não permite que ele diminua*/
+    width: clamp(120px, 20vw, 220px);
 
-    /*Centraliza imagem e texto*/
+    flex-shrink: 0;
+
     display: flex;
-    flex-direction:column;
 
-    align-items: center; /*Centraliza tudo*/
+    flex-direction: column;
 
-    padding: 20px; /*Espaçamento*/
-    box-sizing: border-box; /*Faz a conta da largura ficar mais previsível*/
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 1.25rem;
+}
+
+.ImagemTech {
+    width: clamp(50px, 8vw, 100px);
+
+    height: clamp(50px, 8vw, 70px);
+
+    object-fit: contain;
 }
 
 .legenda-imagem {
     color: white;
-    margin-top: 10px; /*Espaço entre imagem e texto*/
-    font-weight: bold /*Deixa o nome um pouco mais destacado*/
-}
 
-.ImagemTech{
-    width: 60px;
-    height: 60px;
-    object-fit: contain; /* Evita que a imagem fica deformada*/
-}
+    margin-top: 0.625rem;
 
-@keyframes PassarCarrossel {
-    0% { /*Começa na posição normal*/
-        transform: translateX(0);
-    }
+    font-weight: bold;
 
-    /*Vai deslizando para a esquerda*/
-    100% {
-        transform: translateX(-50%);
-    }
+    text-align: center;
+
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .divProjeto {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
 
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 2rem 5%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: clamp(1.5rem, 3vw, 3rem);
 }
+
 
 .divProjeto div {
-    max-width: 300px;
-    border-radius: 40px;
-    padding: 40px;
-    background-color: purple;
-    color: white;
-    margin-bottom: 50px;
-    box-shadow: 5px 10px;
+    width: 100%;
 
+    max-width: none;
+
+    border-radius: 30px;
+
+    padding: clamp(1.2rem, 3vw, 2.5rem);
+
+    background-color: purple;
+
+    color: white;
+
+    margin: 0;
+
+    box-shadow: 5px 10px black;
+
+    overflow: hidden;
 }
+
+.imagemProjeto {
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.imagemProjeto:hover {
+    transform: scale(1.05);
+}
+
 
 #SectionCertificados {
     min-height: 80vh;
+
+    padding: 4rem 5%;
 }
+
 
 .DivCertificado {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: clamp(1.5rem, 4vw, 4rem);
+
+    justify-items: center;
 }
 
+
 .DivCertificado div {
-    color: white;
-    border-radius: 20px;
-    background-color: purple;
-    padding: 40px;
+    width: 100%;
+
     max-width: 500px;
+
+    color: white;
+
+    border-radius: 20px;
+
+    background-color: purple;
+
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+
+    text-align: center;
 }
 
 .ImagemCertificado {
-    width: 200px;
+    width: min(200px, 70%);
+
+    height: auto;
+
+    margin: 0 auto;
 }
 
 .a-certificados {
     text-decoration: none;
+
     color: black;
+
+    transition: color 0.3s ease;
 }
 
 .a-certificados:hover {
     color: white;
 }
 
-.imagemProjeto {
-    width: 100%;
-}
-
-.imagemProjeto:hover {
-    width: 200%;
-}
-.h3 {
-    font-size: 20px;
-}
-
 #paragrafo {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+
     max-width: 500px;
-    color: white
+
+    margin: 1rem auto;
+
+    color: white;
+
+    line-height: 1.6;
+}
+
+.h3 {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
 }
 
 .imgLogoGitProjeto {
-    box-shadow: 2px 2px #515151;
     width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+    box-shadow: 2px 2px #515151;
 }
+
+@keyframes move {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes buttonsIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes glitch {
+
+    0%,
+    100% {
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 45%,
+            0 45%
+        );
+
+        transform: translate(0);
+    }
+
+    33% {
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 15%,
+            0 15%
+        );
+
+        transform: translate(-5px, -5px);
+    }
+
+    66% {
+        clip-path: polygon(
+            0 85%,
+            100% 85%,
+            100% 100%,
+            0 100%
+        );
+
+        transform: translate(5px, 5px);
+    }
+}
+
+
+@keyframes PassarCarrossel {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   768px OU MENOS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    #DivNavbar {
+        justify-content: center;
+
+        padding: 0.8rem 1rem;
+
+        gap: 1rem;
+    }
+
+    .navbar {
+        font-size: 0.9rem;
+    }
+
+
+    #quem-sou {
+        padding: 90px 5% 50px;
+    }
+
+    #resumoEFoto {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 2rem;
+    }
+
+    #paragrafoResumo {
+        padding: 0;
+
+        max-width: 700px;
+    }
+
+    #imagemPerfil {
+        width: min(50vw, 300px);
+
+        margin: 0 auto;
+    }
+
+    #botao {
+        margin-top: 1rem;
+    }
+
+
+    .divProjeto {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding: 2rem 4%;
+    }
+
+
+    .DivCertificado {
+        grid-template-columns:
+            1fr;
+
+        padding: 0 4%;
+    }
+
+    .DivCertificado div {
+        max-width: 600px;
+    }
+
+
+    .Conhecimento {
+        width: 180px;
+    }
+
+    .ImagemTech {
+        width: 70px;
+        height: 60px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   480px OU MENOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+
+    #header {
+        min-height: 55px;
+    }
+
+    #DivNavbar {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        padding: 0.6rem;
+
+        gap: 0.6rem;
+    }
+
+    .navbar {
+        font-size: 0.8rem;
+
+        margin: 0;
+    }
+
+    #quem-sou {
+        padding: 80px 1rem 40px;
+    }
+
+    #h1 {
+        font-size: 2.5rem;
+
+        margin-bottom: 2rem;
+    }
+
+    #paragrafoResumo {
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+    #imagemPerfil {
+        width: 220px;
+
+        max-width: 70vw;
+    }
+
+    #botao {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .botao {
+        width: min(250px, 90%);
+
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #p1Main {
+        font-size: 1rem;
+    }
+
+    #SectionConhecimento {
+        padding: 3rem 1rem;
+    }
+
+    .DivConhecimento {
+        border-radius: 15px;
+    }
+
+    .Conhecimento {
+        width: 130px;
+
+        padding: 1rem;
+    }
+
+    .ImagemTech {
+        width: 55px;
+
+        height: 50px;
+    }
+
+    .legenda-imagem {
+        font-size: 0.8rem;
+    }
+
+    .divProjeto {
+        grid-template-columns: 1fr;
+
+        padding: 1rem;
+    }
+
+    .divProjeto div {
+        padding: 1.3rem;
+
+        border-radius: 20px;
+    }
+
+    #SectionCertificados {
+        padding: 3rem 1rem;
+    }
+
+    .DivCertificado {
+        padding: 0;
+
+        grid-template-columns: 1fr;
+    }
+
+    .DivCertificado div {
+        padding: 1.3rem;
+
+        border-radius: 15px;
+    }
+
+    .ImagemCertificado {
+        width: 180px;
+    }
+
+    #paragrafo {
+        padding: 0 1rem;
+
+        font-size: 0.95rem;
+    }
+}
+
+
+@media (min-width: 1400px) {
+
+    #quem-sou {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    #SectionConhecimento,
+    #SectionCertificados {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .divProjeto {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+
