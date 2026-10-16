@@ -482,6 +482,19 @@ hr {
     box-shadow: 2px 2px #515151;
 }
 
+.imgLogoProjeto {
+    width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+   margin-top: 2rem;
+
+   display: inline-block;
+
+}
+
 @keyframes move {
 
     from {
